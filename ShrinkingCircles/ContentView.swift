@@ -26,6 +26,14 @@ struct ShrinkingCircle: Shape {
 //        path.addEllipse(in: CGRect(origin: CGPoint(x: rect.midX - rect.midY + 25 * 3, y: 25 * 3), size: CGSize(width: rect.height - 50 * 3, height: rect.height - 50 * 3)))
         
         
+        //Loop to make smaller circles
+        for i in 0...7 {
+            
+            let j = CGFloat(i)
+            
+            path.addEllipse(in: CGRect(origin: CGPoint(x: rect.midX - rect.midY + 25 * j, y: 25 * j), size: CGSize(width: rect.height - 50 * j, height: rect.height - 50 * j)))
+            
+        }
         
         
         //Return the Path
